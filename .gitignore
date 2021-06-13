@@ -1,2 +1,5 @@
 .idea
 .idea/*
+*.dat
+*.gpl
+.DS_Store
