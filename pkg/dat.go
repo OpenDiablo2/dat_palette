@@ -9,8 +9,10 @@ const (
 	numColors = 256
 )
 
-// Unmarshal loads a DAT file into a color.Palette
-func Unmarshal(data []byte) (color.Palette, error) {
+type DAT color.Palette
+
+// Decode loads a DAT file into a color.Palette
+func Decode(data []byte) (DAT, error) {
 	const (
 		// index offset helpers
 		b = iota
@@ -19,7 +21,7 @@ func Unmarshal(data []byte) (color.Palette, error) {
 		o
 	)
 
-	palette := make(color.Palette, numColors)
+	palette := make(DAT, numColors)
 
 	for idx := range palette {
 		// offsets look like idx*3+n, where n is 0,1,2
@@ -29,8 +31,8 @@ func Unmarshal(data []byte) (color.Palette, error) {
 	return palette, nil
 }
 
-// Marshal encodes a color.Palette into a byte slice in DAT palette format
-func Marshal(p color.Palette) []byte {
+// Encode encodes a color.Palette into a byte slice in DAT palette format
+func Encode(p DAT) []byte {
 	result := make([]byte, 0)
 
 	for idx := range p {
