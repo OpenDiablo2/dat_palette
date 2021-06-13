@@ -1,2 +1,2 @@
-// Package dat_palette contains the logic for loading and processing DAT files.
-package dat_palette
+// Package pkg contains a DAT palette decoder/encoder implementation.
+package pkg

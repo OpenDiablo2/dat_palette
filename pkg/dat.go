@@ -1,16 +1,8 @@
-package dat_palette
+package pkg
 
 import (
 	"image/color"
 	"math"
-)
-
-const (
-	// index offset helpers
-	b = iota
-	g
-	r
-	o
 )
 
 const (
@@ -19,6 +11,14 @@ const (
 
 // Unmarshal loads a DAT file into a color.Palette
 func Unmarshal(data []byte) (color.Palette, error) {
+	const (
+		// index offset helpers
+		b = iota
+		g
+		r
+		o
+	)
+
 	palette := make(color.Palette, numColors)
 
 	for idx := range palette {
