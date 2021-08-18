@@ -1,4 +1,4 @@
-module github.com/gravestench/dat_palette
+module github.com/OpenDiablo2/dat_palette
 
 go 1.16
 
