@@ -9,7 +9,7 @@ import (
 	"path"
 	"path/filepath"
 
-	dat "github.com/gravestench/dat_palette/pkg"
+	dat "github.com/OpenDiablo2/dat_palette/pkg"
 	gpl "github.com/gravestench/gpl/pkg"
 )
 
